@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --max-width: 1100px;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
@@ -104,4 +104,96 @@ a {
   html {
     color-scheme: dark;
   }
+} */
+/* Start */
+@import url("swiper/swiper.css");
+@import url("swiper/css/navigation");
+@import url("swiper/css/pagination");
+@import url("swiper/css/scrollbar");
+:root {
+  --header-height: 70px;
+  --page-padding: 2rem;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hero-bg-image-overlay {
+  z-index: 20;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+.hero-bg-image {
+}
+.hero-bg-image::before {
+  content: "";
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-color: red;
+}
+.card-bg {
+  background: #4b6cb7; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #4b6cb7,
+    #182848
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #4b6cb7, #182848);
+}
+.tab-bg {
+  background: #ec6f66; /* fallback for old browsers */
+  /* background: -webkit-linear-gradient(
+    to left,
+    #f3a183,
+    #ec6f66
+  );  */
+  background: linear-gradient(
+    to left,
+    #760161,
+    #23011a
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.full-size {
+  height: 100%;
+  width: 100%;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  background-color: transparent !important;
+  color: white;
+
+  /* color: default; */
+}
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  /* border: 1px solid green; */
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-background-clip: text;
+  background: transparent;
 }
